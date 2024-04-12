@@ -130,6 +130,7 @@ function initialize()
 		let planeGeometry = new THREE.PlaneGeometry(1.25, 1.25);
 		let planeMaterial = new THREE.MeshBasicMaterial({map: allowTexture, transparent: true, opacity: 0.9});
 		let planeMesh = new THREE.Mesh(planeGeometry, planeMaterial);
+		planeMesh.rotation.x = Math.PI / 2;
 		// 向きを平面にあわせる
 		// planeMesh.lookAt(0, 1, 0);
 		markerRoot.add(planeMesh);
